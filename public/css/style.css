@@ -1,0 +1,169 @@
+*{
+	/*border: solid 1px red;*/
+  box-sizing: border-box;
+}
+body.a-body{
+  margin: -12px;
+	padding: 0px;
+	font-family: sans-serif;
+}
+#burgerChkbx{
+	padding: 0;
+	margin: 20px 0px 0px 20px;
+	position: relative;
+	visibility: hidden;
+}
+#like_button_container{
+	margin: 15px;
+}
+#menu {
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	background-color: #ffffff33;
+	top: 23px;
+	left: 22px;
+}
+.line {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 1.5px;
+  border-bottom: solid 3px black;
+}
+
+#menu:before {
+	content: '';
+	position: absolute;
+	width: 36px;
+	height: 18px;
+	border-bottom: solid 3px green;
+	top: -10px;
+	left: 0px;
+	transition: 500ms;
+}
+#menu:hover::before{
+	width: 22px;
+	border-bottom: solid 3px #0323fb;
+	top: 7px;
+	left: 11px;
+	transform: rotate(70deg);
+}
+#menu:active::before{
+	width: 36px;
+	border-bottom: solid 3px #1d3c2d;
+	top: 3px;
+	left: 7px;
+	transform: rotate(45deg);
+}
+#menu.active:before{
+	width: 36px;
+	border-bottom: solid 3px #1d3c2d;
+	top: 3px;
+	left: 7px;
+	transform: rotate(45deg);
+}
+#menu:after {
+	content: '';
+	position: absolute;
+	width: 36px;
+	height: 18px;
+	border-bottom: solid 3px red;
+	top: 8px;
+	left: 0px;
+	transition: 500ms;
+}
+#menu:hover::after{
+	width: 29px;
+	border-bottom: solid 3px #0323fb;
+	top: 8px;
+	left: 15px;
+	transform: rotate(102deg);
+}
+#menu:active::after{
+	width: 36px;
+	border-bottom: solid 3px #1d3c2d;
+	top: 16px;
+	left: 7px;
+	transform: rotate(135deg);
+}
+#menu.active:after{
+	width: 36px;
+	border-bottom: solid 3px #1d3c2d;
+	top: 16px;
+	left: 7px;
+	transform: rotate(135deg);
+}
+#menu:hover .line, #menu.active .line {
+	border-bottom: none;
+}
+
+.menuBtn{
+	cursor: pointer;
+	margin-top: 5px;
+	padding: 5px;
+	border-radius: 2px;
+}
+.menuBtn:hover{
+	background-color: olivedrab;
+}
+.hiddenDeleteBtn{
+	visibility: hidden;
+}
+.visibleDeleteBtn{
+	visibility: visible;
+}
+#html-2d-place{
+	position: relative;
+	padding: 5px;
+	z-index: 10;
+}
+
+#scene-place{
+position: relative;
+	z-index: 1;
+}
+#modal{
+	margin: 20px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+
+}
+.hiddenModal{
+	visibility: hidden;
+}
+label {
+	margin: auto;
+	width: 120px;
+	display: block;
+}
+.visibleModal{
+	visibility: visible;
+}
+#modalDiv{
+	height: 300px;
+	overflow: auto;
+}
+.ulModal {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.liModal {
+	margin: 5px;
+	font-size: 10px;
+	text-align: center;
+	border-radius: 2px;
+	background-color: rgba(0, 176, 176, 0.2);
+	padding: 15px;
+	overflow-wrap: break-word;
+}
+
+.liModal:hover{
+	background-color: rgba(0, 176, 176, 0.8);
+}
+.coord{
+	width: 50px;
+	text-align: center;
+}

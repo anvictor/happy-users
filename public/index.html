@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <!--<base href="http://webhelp.kiev.ua/happy-users/">-->
+  <title>Happy-users</title>
+</head>
+<body>
+  <div id="html-2d-place">
+    <input type="checkbox" id="burgerChkbx"> <label for="burgerChkbx"><div id="menu"><div class="line"></div></div></label>
+    <form class="hiddenModal" id="modal" enctype='application/json'>
+      <input class="menuBtn" name="newElemBtn" type="button" value='&#9660; add new element to a 3d scene'>
+      <input class="menuBtn" name="delElemBtn" type="button" value='(X) delete an element from scene'>
+      <input class="menuBtn" name="saveSceneBtn" type="button" value='&#9668; save scene'>
+      <input class="menuBtn" name="deleteAllBtn" type="button" value='(X...X) delete all elements'>
+      <input class="menuBtn" name="loadSceneBtn" type="button" value='&#9658; load scene from saved'>
+
+    </form>
+    <div id="like_button_container" class="like_button_container"></div>
+  </div>
+  <div id="scene-place">
+  	<a-scene background="color: #ECECEC; transparent: true">
+      <a-box color="#4CC3D9" id="box000000" position="-1 0.5 -3" rotation="0 45 0" shadow></a-box>
+      <a-sphere color="#EF2D5E" src ="SphericalHorseInVacuum.jpg"  id="sphere000000" position="0 1.25 -5" radius="1.25" shadow></a-sphere>
+      <a-cylinder color="#FFC65D"  id="cylinder000000" position="1 0.75 -3" radius="0.5" height="1.5" shadow></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
+      <a-text position="-0.549 2.732 -4" rotation="0 0 0" width="4" height="4" color="#4437e6" shadow value="Happy-Users!"></a-text>
+    </a-scene>
+	</div>
+
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+
+  <script src='lib/main.js'></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="lib/react.development.js" crossorigin></script>
+  <script src="lib/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src='lib/react.js'></script>
+  <script src='lib/like_button.js'></script>
+
+
+</body>
+</html>
